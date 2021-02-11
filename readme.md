@@ -1,6 +1,7 @@
 # Subjects. About Project
 
 <b>취업구직 사이트의 정보를 스크래핑하는 파이썬 프로그래밍의 실습</b>
+<br><br>
 
 # Setting your project
 
