@@ -1,0 +1,20 @@
+{
+  "name": "familyapp-with-nodejs",
+  "version": "1.0.0",
+  "description": "<b>가족용 다이어리 앱 개발을 위한 nodeJS기반 백엔드 작업</b> <br><br>",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start" : "nodemon app"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kimkyury/FamilyAPP-WITH-nodeJS.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kimkyury/FamilyAPP-WITH-nodeJS/issues"
+  },
+  "homepage": "https://github.com/kimkyury/FamilyAPP-WITH-nodeJS#readme"
+}

@@ -1,24 +1,12 @@
 # Subjects. About Project
 
-<b>취업구직 사이트의 정보를 스크래핑하는 파이썬 프로그래밍의 실습</b>
+<b>가족용 다이어리 앱 개발을 위한 nodeJS기반 백엔드 작업</b>
 <br><br>
 
 # Setting your project
 
-## 1. setting virtualenv
-
-- <code>pip install virtualenv</code>
-- <code>virtualenv venv</code>
-
-## 2. enter virtualenv
-
-- <code>. venv/scripts/activate</code>
-
-## 3. install pip modules
-
-- <code>pip install -r requirements.txt</code>
-  <br><br>
+<b> 작성준비중입니다.</b>
 
 #### Reference
 
-[노마드코어] (https://nomadcoders.co/courses)
+<b> 작성준비중입니다.
