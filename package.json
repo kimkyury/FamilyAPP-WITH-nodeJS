@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start" : "nodemon app"
+    "start": "nodemon app"
   },
   "repository": {
     "type": "git",
@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/kimkyury/FamilyAPP-WITH-nodeJS/issues"
   },
-  "homepage": "https://github.com/kimkyury/FamilyAPP-WITH-nodeJS#readme"
+  "homepage": "https://github.com/kimkyury/FamilyAPP-WITH-nodeJS#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.13"
+  }
 }
