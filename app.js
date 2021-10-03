@@ -4,17 +4,27 @@ const path = require("path"); //html파일 연결을 위한 path모듈
 const cookieParser = require("cookie-parser");
 const session = require("express-session");
 const dotenv = require("dotenv");
+// const nunjucks = require("nunjucks"); //nun
 
 dotenv.config();
-
 const indexRouter = require("./routes"); //router 설정
 const userRouter = require("./routes/user"); // userRouter 섲렁
-
+const { dirname } = require("path");
 const app = express();
+
 app.set("port", process.env.PORT || 3000); // 서버가 실행될 포트 설정
+app.set("views", path.join(__dirname, "views"));
+app.set("view engine", "pug");
+// app.set("view engine", "html");
+
+/*
+nunjucks.configure("views", {
+  express: app,
+  watch: true,
+});
+*/
 
 app.use(morgan("dev"));
-
 app.use("/", express.static(path.join(__dirname, "pulic")));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
