@@ -45,13 +45,20 @@ app.use(
 
 app.use("/", indexRouter);
 app.use("/user", userRouter);
-app.use((rqe, res, next) => {
-  res.status(404).send("Not Found");
+
+app.use((req, res, next) => {
+  /* 404 발생시 아래 문구를 출력 */
+  const error = new Error(`${req.mothod} ${req.url} 라우터가 없어요`);
+  error.status = 404;
+  next(error);
 });
 
 app.use((err, req, res, next) => {
-  console.error(err);
-  res.status(500).send(err.message);
+  /* 에러 처리 미들웨어 */
+  res.locals.message = err.message; // err란 템플릿파일을 렌더링 -> 렌더링 시 message와 error에 넣어준 값을 함께 렌더링
+  res.locals.rror = process.env.NODE_ENV !== "production" ? err : {}; // 시스템 환경이 production(배포환경)이 아닐 때만 표시
+  res.status(err.status || 500);
+  res.render("error");
 });
 
 app.get("/", (req, res) => {});
