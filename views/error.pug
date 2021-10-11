@@ -1,12 +1,6 @@
-
-doctype html
-html
-    head
-        title = title
-        link(rel='stylesheet', href='/stylesheets/style.css')
-        block style 
-    body 
-        header 헤더
-        block content
-        footer 푸터
-        block script
+extends layout 
+block content 
+    h1=message 
+    h2= error.status 
+    pre #{error.stack}
+    
