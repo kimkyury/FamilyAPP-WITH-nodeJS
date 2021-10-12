@@ -42,5 +42,8 @@ module.exports = class user extends Sequelize.Model {
       }
     );
   }
-  static associate(db) {} // static associate 메서드
+  static associate(db) {
+    // static associate 메서드
+    db.User.hasMany(db.Comment, { foreignKey: "commenter", sourceKey: "id" });
+  }
 };
