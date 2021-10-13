@@ -5,6 +5,9 @@ const nunjucks = require("nunjucks");
 
 /* sequelize와 sync메서드를 통해 서버 실행 시 MySQL와 연동 */
 const { sequelize } = require("./models"); // require('./models/index.js')와 같음, 폴더 내 index.js파일은 require시 이름 생략 가능
+const indexRouter = require("./routes");
+const userRouter = require("./routes/users");
+const commentsRouter = require("./routes/comments");
 
 const app = express();
 app.set("port", 3001); //app.set("port", process.env.PORT || 3001);
@@ -27,6 +30,10 @@ app.use(morgan("dev"));
 app.use(express.static(path.join(__dirname, "public")));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
+
+app.use("/".indexRouter);
+app.use("/users", usersRouter);
+app.use("/comments", commentsRouter);
 
 app.use((req, res, next) => {
   const error = new Error(`${req.method} ${req.url}라우터가 없습니다.`);
