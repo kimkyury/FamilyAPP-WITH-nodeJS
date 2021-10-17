@@ -17,7 +17,7 @@ db.sequelize = sequelize;
 db.User = User;
 db.Comment = Comment;
 
-User.init(sequelize); //init가 실행되어야 테이블이 모델로 연결 됨
+User.init(sequelize); 
 Comment.init(sequelize);
 
 User.associate(db);
