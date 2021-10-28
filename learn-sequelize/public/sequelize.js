@@ -65,7 +65,7 @@
       </thead>
       <tbody></tbody>
     </table>
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>  
     <script src="/sequelize.js"></script>
   </body>
 </html>
