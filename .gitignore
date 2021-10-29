@@ -1,6 +1,6 @@
 
-# Created by https://www.toptal.com/developers/gitignore/api/node,vue,vuejs
-# Edit at https://www.toptal.com/developers/gitignore?templates=node,vue,vuejs
+# Created by https://www.toptal.com/developers/gitignore/api/node,nuxtjs,vue,vuejs
+# Edit at https://www.toptal.com/developers/gitignore?templates=node,nuxtjs,vue,vuejs
 
 ### Node ###
 # Logs
@@ -126,6 +126,11 @@ dist
 # Serverless Webpack directories
 .webpack/
 
+### Nuxtjs ###
+# Nuxt build
+
+# Nuxt generate
+
 ### Vue ###
 # gitignore template for Vue.js projects
 #
@@ -144,7 +149,7 @@ dist/
 npm-debug.log
 yarn-error.log
 
-# End of https://www.toptal.com/developers/gitignore/api/node,vue,vuejs
+# End of https://www.toptal.com/developers/gitignore/api/node,nuxtjs,vue,vuejs
 
 # kgyury 개발용 숨김파일
 개발기록/
