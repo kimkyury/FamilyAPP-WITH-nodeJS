@@ -13,7 +13,7 @@ console.log("mysql: ", process.env.MYSQL_USERNAME);
 
 /* connect front */
 corsOptions = { 
-    origin: "http://127.0.0.1:3030" 
+    origin: "http://127.0.0.1:3000" 
 }
 app.use(cors(corsOptions));
 
@@ -23,7 +23,7 @@ app.get('/', (req, res) => {
 })
 
 
-const port = 3005
+const port = 3085
 app.listen(port, () => {
     console.log("this server on 3005");
 })
