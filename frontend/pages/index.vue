@@ -13,9 +13,11 @@
       color="#11D600"
       type="button"
       @click="onClickImageUpload"
-      ><v-icon x-large color="white">mdi-plus</v-icon></v-btn
+      >
+      
+      <v-icon x-large color="white">mdi-plus</v-icon></v-btn
     >
-    <br />
+
     </div>
 
 </template>
