@@ -9,7 +9,15 @@ module.exports = {
     ],
     modules: [
         '@nuxtjs/axios',
+        'nuxt-socket-io',
     ],
+    io: {
+        // module options
+        sockets: [{
+            name: 'main',
+            url: 'http://localhost:3085',
+        }]
+    },
     vuetify: {
 
     },
