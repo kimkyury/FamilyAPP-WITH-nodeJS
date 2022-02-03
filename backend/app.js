@@ -21,7 +21,7 @@ const specialRouter = require('./routes/special');
 const specialsRouter = require('./routes/specials');
 const app = express();
 
-db.sequelize.sync();
+db.sequelize.sync({ force: false });
 passportConfig();
 
 app.use(morgan('dev'));

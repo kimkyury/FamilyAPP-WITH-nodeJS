@@ -7,7 +7,7 @@ const development = {
     database: env.MYSQL_DATABASE,
     host: env.MYSQL_HOST,
     dialect: env.MYSQL_DIALECT,
-    port: env.MYSQL_PORT
+    //port: env.MYSQL_PORT
 };
 const test = {
     username: env.MYSQL_USERNAME,
@@ -15,7 +15,7 @@ const test = {
     database: env.MYSQL_DATABASE,
     host: env.MYSQL_HOST,
     dialect: env.MYSQL_DIALECT,
-    port: env.MYSQL_PORT
+    //port: env.MYSQL_PORT
 };
 const production = {
     username: env.MYSQL_USERNAME,
@@ -23,7 +23,7 @@ const production = {
     database: env.MYSQL_DATABASE,
     host: env.MYSQL_HOST,
     dialect: env.MYSQL_DIALECT,
-    port: env.MYSQL_PORT
+    //port: env.MYSQL_PORT
 };
 
 module.exports ={ development, test, production};

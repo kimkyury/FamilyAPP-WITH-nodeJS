@@ -15,7 +15,7 @@ module.exports = {
         // module options
         sockets: [{
             name: 'main',
-            url: 'http://localhost:3085',
+            url: 'http://127.0.0.1:3085',
         }]
     },
     vuetify: {
@@ -26,4 +26,8 @@ module.exports = {
         baseURL: 'http://127.0.0.1:3085',
         https: false,
     },
+    server: {
+        port: 3000,
+        host: '127.0.0.1'
+    }
 };
