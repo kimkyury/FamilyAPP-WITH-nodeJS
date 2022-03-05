@@ -19,7 +19,7 @@
               <v-row>
                 <v-col cols="12">
                   <v-text-field
-                    prepend-icon="mdi-eye-off"
+                    prepend-icon="mdi-account"
                     v-model="email"
                     :rules="emailRules"
                     label="이메일을 적어주세요, ID가 될 거예요!*"
@@ -28,7 +28,7 @@
                 </v-col>
                 <v-col cols="12">
                   <v-text-field
-                    prepend-icon="mdi-eye-off-outline"
+                    prepend-icon="mdi-eye-off"
                     v-model="password"
                     :rules="passwordRules"
                     label="비밀번호를 적어주세요!*"
@@ -38,7 +38,7 @@
                 </v-col>
                 <v-col cols="12">
                   <v-text-field
-                    prepend-icon="mdi-checkbox-marked-circle-outline"
+                    prepend-icon="mdi-eye-off-outline"
                     v-model="passwordCheck"
                     :rules="passwordCheckRules"
                     label="비밀번호를 확인할게요! *"

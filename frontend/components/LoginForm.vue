@@ -12,23 +12,25 @@
       <v-card>
         <v-form ref="form" v-model="valid" @submit.prevent="onSubmitForm">
           <v-card-title>
-            <span class="text-h5">로그인</span>
+            <span class="text-h5">👨‍👩‍👧‍👦 로그인을 해볼까요?</span>
           </v-card-title>
           <v-card-text>
             <v-container>
               <v-row>
                 <v-col cols="12">
                   <v-text-field
+                    prepend-icon="mdi-account"
                     v-model="email"
                     :rules="emailRules"
-                    label="이메일*"
+                    label="당신의 이메일을 적어주세요! *"
                     required
                   ></v-text-field>
                 </v-col>
                 <v-col cols="12">
                   <v-text-field
+                    prepend-icon="mdi-eye-off-outline"
                     v-model="password"
-                    label="비밀번호*"
+                    label="비밀번호를 적어주세요!*"
                     :rules="passwordRules"
                     type="password"
                     required
