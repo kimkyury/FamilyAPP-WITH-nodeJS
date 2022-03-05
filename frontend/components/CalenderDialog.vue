@@ -12,23 +12,26 @@
         </template>
         <v-card>
           <v-card-title>
-            <span class="text-h5">일정 등록</span>
+            <span class="text-h5">🗓 일정 등록하기</span>
           </v-card-title>
           <v-card-text>
             <v-container>
               <v-row>
                 <v-col cols="12">
                   <v-text-field
-                    label="내용"
+                    prepend-icon="mdi-airballoon"
+                    label="어떤 이벤트예요? 한 줄로 적어주세요!"
                     v-model="name"
                     required
                   ></v-text-field>
                 </v-col>
                 <v-container>
-                  <small>시작</small>
+                  <span
+                   class="text-h6">🧚‍♀️ 며칠부터 시작하는 이벤트인가요? </span>
                 </v-container>
                 <v-col cols="12" sm="4">
                   <v-select
+                    prepend-icon="mdi-calendar-clock"
                     v-model="start.year"
                     :items="start.yearItem"
                     label="년도"
@@ -54,6 +57,7 @@
                 </v-col>
                 <v-col cols="12" sm="6">
                   <v-select
+                    prepend-icon="mdi-alarm"
                     v-model="start.hour"
                     :items="start.hourItem"
                     label="시"
@@ -69,10 +73,13 @@
                   ></v-select>
                 </v-col>
                 <v-container>
-                  <small>종료</small>
+                  <br/>
+                  <span
+                   class="text-h6">🧚‍♀️ 언제 끝나는 이벤트인가요?</span>
                 </v-container>
                 <v-col cols="12" sm="4">
                   <v-select
+                    prepend-icon="mdi-calendar-clock"
                     v-model="end.year"
                     :items="end.yearItem"
                     label="년도"
@@ -98,6 +105,7 @@
                 </v-col>
                 <v-col cols="12" sm="6">
                   <v-select
+                    prepend-icon="mdi-alarm"
                     v-model="end.hour"
                     :items="end.hourItem"
                     label="시"
@@ -114,7 +122,9 @@
                 </v-col>
               </v-row>
             </v-container>
-            <small>가족에게 일정을 알리세요!</small>
+             <br/>
+              <span
+                   class="text-h6"> 다 적었나요? 이제 가족에게 일정을 알려봅시다!</span>
           </v-card-text>
           <v-card-actions>
             <v-spacer></v-spacer>
