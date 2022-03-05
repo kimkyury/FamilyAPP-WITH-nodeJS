@@ -8,7 +8,7 @@
         <v-img
           height="500px"
           contain
-          :src="`http://localhost:3085/${images}`"
+          :src="`http://127.0.0.1:3085/${images}`"
         />
       </v-container>
     </div>

@@ -29,7 +29,7 @@
             style="display: inline-block"
           >
             <img
-              :src="`http://localhost:3085/${p}`"
+              :src="`http://127.0.0.1:3085/${p}`"
               :alt="p"
               style="width: 200px"
             />

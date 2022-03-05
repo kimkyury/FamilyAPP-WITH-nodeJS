@@ -1,30 +1,39 @@
 <template>
   <!-- Conatiner -->
-    <div
-      align="center"
-      justify="center"
-      class="py-3"
-      style="margin: auto; margin-top: 3%"
-    >
-    <input ref="imageInput" type="file" hidden @change="onChangeImage" />
-    <v-btn
-      fab
-      elevation="0"
-      color="#11D600"
-      type="button"
-      @click="onClickImageUpload">
-      <v-icon x-large color="white">mdi-plus</v-icon>
-    </v-btn>
+  <div
+    align="center"
+    justify="center"
+    class="py-3"
+    content-class = "box"
+    style="margin: auto; margin-top: 3%"
+  >
+  <div
+    align = "center"
+    class="box"
+  >
+    <v-img
+      :src="`http://127.0.0.1:3085/${path.src}`"
+      contain
+      content-class = "shape"
+      aspect-ratio="1"
+      width="300"
+    />
     </div>
+    <input ref="imageInput" type="file" hidden @change="onChangeImage" /><br />
+    <img src="../img/image_plus.png" width="56" v-on:click="onClickImageUpload" /><br /><br /><br />
+    <special-day></special-day><br /><br />
+  </div>
 </template>
 
 <script>
 import SpecialDay from "../components/SpecialDay";
 import MainImage from "../components/MainImage.vue";
+import PostImages from "../components/PostImages.vue";
 export default {
   components: {
     SpecialDay,
     MainImage,
+    PostImages,
   },
   fetch({ store }) {
     store.dispatch("specials/loadSpecials");
@@ -55,4 +64,24 @@ export default {
 </script>
 
 <style>
+.box{
+
+  border: 10px solid transparent;
+  border-radius: 150px;
+  background-image: 
+    linear-gradient(#444444, #444444), 
+    linear-gradient(to right, #d9da8cbe, #ffcdf3aa, #96d8a4aa);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+  margin-bottom: 10px;
+  
+  width: 350px;
+  height: 300px;
+
+  overflow:hidden;
+}
+.shape{
+  width: 100%;
+  height: 100%;
+}
 </style>

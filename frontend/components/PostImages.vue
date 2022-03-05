@@ -1,7 +1,7 @@
 <template>
   <div>
     <v-img
-      :src="`http://localhost:3085/${images}`"
+      :src="`http://127.0.0.1:3085/${images}`"
       contain
       aspect-ratio="2"
       @click="zoomImages"

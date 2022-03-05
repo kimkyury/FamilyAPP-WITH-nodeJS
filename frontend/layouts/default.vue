@@ -1,52 +1,35 @@
 <template>
   <v-app>
     <template v-if="me">
-      <v-card text tile>
-        <v-toolbar class="accent-2" elevation="0" color="#DAFF8C">
+      <v-card text elevation="0">
+        <v-toolbar class="accent-2 rounded-lg" elevation="5" color="white">
           <v-toolbar-title>
             <nuxt-link to="/"
-              ><img src="../img/logo.png" width="90"
+              ><img src="../img/with_logo2.png" width="90"
             /></nuxt-link>
           </v-toolbar-title>
 
           <v-spacer></v-spacer>
-          <v-btn
-            class="mx-1"
-            small
-            fab
-            elevation="0"
-            color="#11D600"
-            @click="onLogoutForm"
-          >
-            <v-icon color="white">mdi-logout</v-icon>
-          </v-btn>
+          <img src="../img/logout_btn.png" width="40" v-on:click="onLogoutForm" />
         </v-toolbar>
       </v-card>
       <v-main>
         <nuxt />
       </v-main>
-      <v-footer v-bind="localAttrs" :padless="padless" class="ma-0 pa-0">
+      <v-footer v-bind="localAttrs" :padless="padless" class="ma-0 pa-0" elevation="5">
         <v-card
           text
-          tile
           width="100%"
-          class="accent-2 text-center"
-          color="#DAFF8C"
+          class="text-center pt-2 accent-2 rounded-lg"
+          color="white"
         >
           <v-card-text>
             <v-row justify="space-around">
-              <v-btn
-                v-for="x in menu"
-                :key="x[0]"
-                class="ma-3"
-                fab
-                elevation="0"
-                color="#11D600"
-              >
+              <div v-for="x in menu" :key="x[0]">
                 <nuxt-link :to="`/${x[1]}`">
-                  <v-icon large color="white"> mdi-{{ x[0] }} </v-icon>
+                  <img :src="require(`../img/${x[0]}.png`)" width="40"/>
                 </nuxt-link>
-              </v-btn>
+              </div>
             </v-row>
           </v-card-text>
 
@@ -56,9 +39,14 @@
     </template>
     <template v-else>
       <v-row align="center">
-        <v-container>
+        <v-container fluid style="margin: 0px; padding: 0px; width: 100%">
+          <div align="center" justify="center">
+          <img src="../img/with_logo.png" width="300"><br /><br />
+          </div>
+          <v-sheet class="overflow-hidden pt-8" color="#FFFCEF" elevation="0" height="240" width="100%">
           <login-form /><br /><br />
           <signup-form />
+          </v-sheet>
         </v-container>
       </v-row>
     </template>
@@ -73,9 +61,9 @@ export default {
   data() {
     return {
       menu: [
-        ["image-album", "album"],
-        ["message", "message"],
-        ["calendar", "calendar"],
+        ["album", "album"],
+        ["chatting", "message"],
+        ["calender", "calendar"],
       ],
       isLoginForm: false,
       isLoggin: false,

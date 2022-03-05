@@ -8,8 +8,8 @@
     >
       <template v-slot:activator="{ on, attrs }">
         <img
-          src="../img/special_day_btn.png"
-          width="200"
+          src="../img/special.png"
+          width="40"
           v-bind="attrs"
           v-on="on"
         />
