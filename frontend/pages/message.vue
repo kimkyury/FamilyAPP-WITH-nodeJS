@@ -23,8 +23,13 @@
         }}
       </v-text>
       <v-card
+        :class="[
+          message.User && message.User.id === me.id
+            ? style='background-color: #C8FF54; border-radius: 10px / 10px;'
+            : style='background-color: #DAFF8C; border-radius: 10px / 10px;',
+        ]"
         max-width="344"
-        style="background-color: #daff8c; border-radius: 10px / 10px"
+        :style='style'
       >
         <v-container>
           {{ message.message }}
@@ -32,17 +37,17 @@
       </v-card>
     </v-card>
 
-    <v-container>
-      <form @submit.prevent="submit">
+    <v-container fluid style="margin: 0px; padding: 0px; width: 100%">
+      <form @submit.prevent="submit" align="center" justify="center">
         <input
           class="form-control"
           placeholder="가족에게 메시지를 보내세요 💌"
           v-model="message"
           style="
-            width: 100%;
+            width: 90%;
             height: 40px;
             padding: 5px;
-            border: solid #daff8c;
+            border: solid #C8FF54;
             border-radius: 10px / 10px;
             outline: none;
           "

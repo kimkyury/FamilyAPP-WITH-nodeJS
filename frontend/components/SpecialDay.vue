@@ -15,14 +15,16 @@
         />
       </template>
       <v-card style="overflow-x: hidden">
-        <v-toolbar color="#DAFF8C" class="accent-2">
-          <v-btn icon dark @click="dialog = false">
-            <v-icon>mdi-close</v-icon>
-          </v-btn>
-          <v-toolbar-title>기념일</v-toolbar-title>
+        <v-toolbar color="#DAFF8C" class="accent-2 rounded-lg" elevation="5">
+          <v-toolbar-title style="font-size: 35px">기념일</v-toolbar-title>
+          <v-spacer></v-spacer>
+          <img src="../img/exit.png" width="40" @click="dialog = false">
         </v-toolbar>
+        <br/>
         <v-list three-line subheader>
-          <v-subheader class="pt-3">생일</v-subheader>
+          <v-subheader class="pt-3" style="font-size: 20px">
+            <v-icon color="black">mdi-cake</v-icon>
+            &nbsp;생일 </v-subheader>
           <v-list-item v-for="(b, i) in birth" :key="b.id">
             <v-list-item-content class="pl-3" style="font-weight: 700">
               {{ b.category
@@ -43,7 +45,10 @@
         </v-list>
         <v-divider></v-divider>
         <v-list three-line subheader>
-          <v-subheader class="pt-3">가족기념일</v-subheader>
+          <v-subheader class="pt-3" style="font-size: 20px">
+            <v-icon color="black">mdi-calendar-check</v-icon>
+            &nbsp;가족기념일
+          </v-subheader>
           <special-item v-for="(s, i) in special" :key="i" :special="s" />
           <br />
           <special-dialog></special-dialog>

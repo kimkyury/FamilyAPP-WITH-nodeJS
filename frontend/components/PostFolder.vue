@@ -8,7 +8,7 @@
     style="margin-bottom: 160px"
   >
     <nuxt-link :to="`/folder/${folder.id}`"
-      ><img src="../img/folder_blue.png" width="160" /><br /><br />{{
+      ><img src="../img/photo_folder.png" width="160" /><br /><br />{{
         dateText
       }}</nuxt-link
     >

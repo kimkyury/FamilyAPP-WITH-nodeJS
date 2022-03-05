@@ -4,8 +4,8 @@
       <v-dialog v-model="dialog" persistent max-width="600px">
         <template v-slot:activator="{ on, attrs }">
           <img
-            src="../img/schedule_btn.png"
-            width="160"
+            src="../img/schedule_plus.png"
+            width="56"
             v-bind="attrs"
             v-on="on"
           />
@@ -77,7 +77,7 @@
                 </v-col>
                 <v-container>
                   <br/>
-                                    <div class = "half_background">
+                  <div class = "half_background">
                   <span
                    class="text-h6">🧚‍♀️ 언제 끝나는 이벤트인가요?</span> </div>
                 </v-container>

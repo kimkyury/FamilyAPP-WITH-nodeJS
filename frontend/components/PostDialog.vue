@@ -2,7 +2,7 @@
   <v-row justify="center">
     <v-dialog v-model="dialog" persistent max-width="800px">
       <template v-slot:activator="{ on, attrs }">
-        <img src="../img/photo_btn.png" width="200" v-bind="attrs" v-on="on" />
+        <img src="../img/photo_upload.png" width="56" v-bind="attrs" v-on="on" />
       </template>
       <v-card>
         <v-card-title
@@ -34,13 +34,7 @@
             hidden
             @change="onChangeImages"
           />
-          <v-btn
-            rounded
-            color="#57E1FF"
-            type="button"
-            @click="onClickImageUpload"
-            >이미지 업로드</v-btn
-          >
+        <img src="../img/image_plus.png" width="56" @click="onClickImageUpload">  
           <br/><br/>
           <div>
             <div

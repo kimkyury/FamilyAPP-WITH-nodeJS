@@ -2,9 +2,12 @@
   <v-row justify="center">
     <v-dialog v-model="dialog" persistent max-width="600px">
       <template v-slot:activator="{ on, attrs }">
-        <v-btn color="#11D600" dark v-bind="attrs" v-on="on">
-          기념일 추가
-        </v-btn>
+        <img
+          src="../img/special_plus.png"
+          width="56"
+          v-bind="attrs"
+          v-on="on"
+        />
       </template>
       <v-card>
         <v-card-title>
