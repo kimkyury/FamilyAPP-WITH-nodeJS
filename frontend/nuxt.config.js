@@ -18,8 +18,14 @@ module.exports = {
             url: 'http://127.0.0.1:3085',
         }]
     },
+    css: [
+        './assets/common.css',
+    ],
+
+
     vuetify: {
         customVariables: ['/assets/variables.scss'],
+
         treeShake: true
 
     },

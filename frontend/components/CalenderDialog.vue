@@ -11,7 +11,8 @@
           />
         </template>
         <v-card>
-          <v-card-title>
+          <v-card-title
+          class = "half_background_title">
             <span class="text-h5">🗓 일정 등록하기</span>
           </v-card-title>
           <v-card-text>
@@ -26,8 +27,10 @@
                   ></v-text-field>
                 </v-col>
                 <v-container>
+                  <div class = "half_background">
                   <span
                    class="text-h6">🧚‍♀️ 며칠부터 시작하는 이벤트인가요? </span>
+                   </div>
                 </v-container>
                 <v-col cols="12" sm="4">
                   <v-select
@@ -74,8 +77,9 @@
                 </v-col>
                 <v-container>
                   <br/>
+                                    <div class = "half_background">
                   <span
-                   class="text-h6">🧚‍♀️ 언제 끝나는 이벤트인가요?</span>
+                   class="text-h6">🧚‍♀️ 언제 끝나는 이벤트인가요?</span> </div>
                 </v-container>
                 <v-col cols="12" sm="4">
                   <v-select
@@ -296,4 +300,11 @@ export default {
 </script>
 
 <style>
+.half_background_title {
+  background: linear-gradient(to top, rgb(200, 244, 212) 100%, transparent 50%);
+}
+
+.half_background {
+  background: linear-gradient(to top, rgb(200, 244, 212) 30%, transparent 50%);
+}
 </style>

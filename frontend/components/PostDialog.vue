@@ -5,8 +5,9 @@
         <img src="../img/photo_btn.png" width="200" v-bind="attrs" v-on="on" />
       </template>
       <v-card>
-        <v-card-title>
-          <span class="text-h5">Upload</span>
+        <v-card-title
+         class ="half_background_title">
+          <span class="text-h5">🖼 추억 등록하기</span>
         </v-card-title>
         <v-card-text>
           <v-container>
@@ -40,7 +41,7 @@
             @click="onClickImageUpload"
             >이미지 업로드</v-btn
           >
-          <br /><br />
+          <br/><br/>
           <div>
             <div
               v-for="(p, i) in imagePaths"
@@ -62,6 +63,7 @@
           <v-row>
             <v-col cols="12" sm="4">
               <v-select
+              prepend-icon = "mdi-calendar-blank"
                 v-model="year"
                 :items="yearItem"
                 label="년도"
@@ -211,3 +213,5 @@ export default {
   },
 };
 </script>
+<style>
+</style>

@@ -1,0 +1,7 @@
+.half_background_title {
+    background: linear-gradient(to top, rgb(200, 244, 212) 100%, transparent 50%);
+  }
+  
+  .half_background {
+    background: linear-gradient(to top, rgb(200, 244, 212) 30%, transparent 50%);
+  }
