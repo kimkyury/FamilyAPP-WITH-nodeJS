@@ -36,7 +36,7 @@
       <form @submit.prevent="submit">
         <input
           class="form-control"
-          placeholder="Write a message"
+          placeholder="가족에게 메시지를 보내세요 💌"
           v-model="message"
           style="
             width: 100%;

@@ -12,42 +12,51 @@
       <v-card>
         <v-form ref="form" v-model="valid" @submit.prevent="onSubmitForm">
           <v-card-title>
-            <span class="text-h5">회원가입</span>
+            <span class="text-h5">👨‍👩‍👧‍👦 회원가입</span>
           </v-card-title>
           <v-card-text>
             <v-container>
               <v-row>
                 <v-col cols="12">
                   <v-text-field
+                    prepend-icon="mdi-eye-off"
                     v-model="email"
                     :rules="emailRules"
-                    label="이메일*"
+                    label="이메일을 적어주세요, ID가 될 거예요!*"
                     required
                   ></v-text-field>
                 </v-col>
                 <v-col cols="12">
                   <v-text-field
+                    prepend-icon="mdi-eye-off-outline"
                     v-model="password"
                     :rules="passwordRules"
-                    label="비밀번호*"
+                    label="비밀번호를 적어주세요!*"
                     type="password"
                     required
                   ></v-text-field>
                 </v-col>
                 <v-col cols="12">
                   <v-text-field
+                    prepend-icon="mdi-checkbox-marked-circle-outline"
                     v-model="passwordCheck"
                     :rules="passwordCheckRules"
-                    label="비밀번호확인*"
+                    label="비밀번호를 확인할게요! *"
                     type="password"
                     required
                   ></v-text-field>
                 </v-col>
                 <v-col cols="12">
-                  <v-text-field v-model="nickname" required></v-text-field>
+                  <v-text-field 
+                    prepend-icon="mdi-label"
+                    v-model="nickname" 
+                    label= "당신의 이름을 입력해주세요! "
+                    required>
+                    </v-text-field>
                 </v-col>
                 <v-col cols="12">
                   <v-select
+                    prepend-icon="mdi-home"
                     v-model="category"
                     :rules="categoryRules"
                     :items="['엄마', '아빠', '딸', '아들']"
@@ -57,6 +66,7 @@
                 </v-col>
                 <v-col cols="12" sm="4">
                   <v-select
+                    prepend-icon="mdi-calendar-question"
                     v-model="year"
                     :rules="yearRules"
                     :items="yearItem"
@@ -66,6 +76,7 @@
                 </v-col>
                 <v-col cols="12" sm="4">
                   <v-select
+                                      prepend-icon="mdi-checkbox-marked-circle-outline"
                     v-model="month"
                     :rules="monthRules"
                     :items="[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]"
@@ -75,6 +86,7 @@
                 </v-col>
                 <v-col cols="12" sm="4">
                   <v-select
+                                      prepend-icon="mdi-checkbox-marked-circle-outline"
                     v-model="day"
                     :rules="dayRules"
                     :items="dayItem"
